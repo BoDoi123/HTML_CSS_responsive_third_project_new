@@ -1,0 +1,395 @@
+/* PC */
+@media (min-width: 992px) {
+    .mobile-header {
+        display: none;
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 991.98px) {
+    /* 1. Ẩn navbar trên tablet và mobile */
+    .nav-bar {
+        display: none;
+    }
+
+    /* 2. Chuyển logo vào giữa */
+    .header-top {
+        position: relative;
+    }
+
+    .header__logo {
+        position: absolute;
+        left: 50%;
+
+        translate: -50% -50%;
+    }
+
+    /* 3. Căn lại vị trí của menu icon */
+    .menu-header__icon {
+        position: absolute;
+        top: 37px;
+        left: 24px;
+
+        color: #fff;
+
+        width: 24px;
+    }
+
+    /* 4. Overlay */
+    .menu-overlay {
+        position: fixed;
+
+        background-color: rgba(0, 0, 0, 0.3);
+
+        inset: 0;
+
+        z-index: 1;
+
+        /* Bình thường ẩn Overlay đi */
+        opacity: 0;
+        visibility: hidden;
+
+        transition: 0.5s;
+    }
+
+    /* 5. Kiểm tra xem menu checkbox có được checked hay không */
+    .menu-checkbox:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* 6. Code cho menu drawer */
+    .menu-drawer {
+        position: fixed;
+
+        background-color: #2e1919;
+
+        inset: 0 40% 0 0;
+
+        z-index: 2;
+
+        transform: translateX(-100%);
+
+        transition: 0.5s;
+
+        padding: 60px;
+    }
+
+    /* 7. Kiểm tra nếu checkbox được check hiện menu */
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+
+    /* 8. Menu Top */
+    .menu-drawer__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #nav-bar__list--mobile {
+        margin-top: 25px;
+    }
+
+    .nav-bar__link {
+        width: 100%;
+
+        font-size: 2rem;
+    }
+
+    .nav-bar__link:hover {
+        background-color: #00ffff37;
+
+        font-size: 2rem;
+    }
+
+    .close__menu {
+        width: 24px;
+
+        color: #fff;
+    }
+
+    /* Hero Block */
+    .hero {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hero__content {
+        order: 2;
+
+        max-width: 80%;
+        text-align: center;
+        margin: 22px auto;
+    }
+
+    .hero__media {
+        order: 1;
+    }
+
+    /* Service Block */
+    .service__row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service__list {
+        text-align: center;
+    }
+
+    .service-item {
+        width: 90%;
+
+        margin: 0 auto;
+
+        text-align: start;
+    }
+
+    /* Work Block */
+    .work__list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* About Block */
+    .about-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about__media {
+        width: 100%;
+    }
+
+    .about__img--large {
+        width: 100%;
+
+        border-radius: 15px;
+
+        margin: 25px auto;
+    }
+
+    .about__img--small {
+        display: none;
+    }
+
+    .about-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* Team Block */
+    .team__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Install Block */
+    .install__img {
+        display: none;
+    }
+
+    .install__content {
+        max-width: 100%;
+    }
+
+    /* Blog Block */
+    .blog__inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .blog__content {
+        order: 2;
+
+        width: 90%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog__list {
+        order: 1;
+
+        margin: 0 auto;
+
+        width: 65.72%;
+    }
+
+    .blog__heading {
+        max-width: 90%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Footer Block */
+    .footer-hidden-tablet {
+        display: none;
+    }
+
+    .footer__top {
+        grid-template-columns: 0.5fr 0.5fr 1fr;
+    }
+
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    /* Header Section */
+    .header__action {
+        display: none;
+    }
+
+    .menu-header__icon {
+        top: 17px;
+    }
+
+    .menu-drawer {
+        inset: 0 35% 0 0;
+
+        padding: 35px;
+    }
+
+    .nav-bar__item {
+        list-style: none;
+    }
+
+    .separate {
+        border-top: 1.5px solid #8c8b8b;
+
+        margin-top: 10px;
+    }
+
+    /* Hero Section */
+    .hero__img--small {
+        display: none;
+    }
+
+    .hero__media {
+        max-width: 100%;
+    }
+
+    .hero__img--large {
+        max-width: 100%;
+        height: 330px;
+    }
+
+    .hero__heading {
+        font-size: 3rem;
+    }
+
+    .hero__desc {
+        padding: 0;
+    }
+
+    .hero__row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .hero__phone {
+        margin: 0;
+    }
+
+    /* Service Section */
+    .service {
+        padding: 70px 0;
+    }
+
+    .section-desc {
+        width: 94%;
+    }
+
+    .service__row {
+        margin-top: 30px;
+    }
+
+    .service__img {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Work Section */
+    .work {
+        padding: 60px 0;
+    }
+
+    .section-desc {
+        width: 94%;
+    }
+
+    .work-item {
+        padding: 20px;
+    }
+
+    /* About Section */
+    .about {
+        margin-top: 20px;
+        padding: 40px 0;
+    }
+
+    .about__img--large {
+        margin: 20px auto;
+        height: auto;
+    }
+
+    .section-heading {
+        font-size: 3rem;
+    }
+
+    /* Team Section */
+    .team__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Install Section */
+    .install__inner {
+        margin: 40px 0;
+
+        padding: 0 8px;
+    }
+
+    .install__heading {
+        padding: 0;
+
+        width: 88%;
+    }
+
+    .install__desc {
+        font-size: 1.3rem;
+    }
+
+    /* Blog Section */
+    .blog__list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        width: 79.72%;
+    }
+
+    .blog__heading {
+        text-align: center;
+    }
+
+    /* Appointment Section */
+    .appointment__inner {
+        padding: 30px 5px;
+    }
+
+    /* Footer Section */
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer__copyright {
+        margin-top: 20px;
+    }
+}
